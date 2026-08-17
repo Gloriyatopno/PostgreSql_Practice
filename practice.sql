@@ -11,7 +11,6 @@ CREATE TABLE students (
     course VARCHAR(100) NOT NULL
 );
 
--- Insert a few records for practice
 INSERT INTO students (first_name, last_name, email, age, course)
 VALUES
 ('Rahul', 'Sharma', 'rahul@example.com', 20, 'BSc IT'),
@@ -41,11 +40,6 @@ ORDER BY age DESC
 LIMIT 10;
 
 SELECT COUNT(*) FROM students;
-
--- Testing the age constraint
--- This gives an error because age cannot be less than 18:
--- INSERT INTO students (first_name, last_name, email, age, course)
--- VALUES ('Test', 'Student', 'test@example.com', 17, 'BSc IT');
 
 -- Imported the Mockaroo CSV using:
 -- \copy students(first_name, last_name, email, age, course) FROM 'MOCK_DATA.csv' WITH (FORMAT csv, HEADER true);
